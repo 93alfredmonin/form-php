@@ -17,26 +17,29 @@
                 <legend>Авторизация</legend>
                 <div class="auth__row">
                     <label for="username">User name</label>
-                    <input type="text" id="username">
+                    <input class="auth__text" type="text" id="username">
+                    <i class="auth__error">Don't content (_, {}, -, $, 0-9) legth > 5 chars</i>
                 </div>
 
                 <div class="auth__row">
                     <label for="useremail">User e-mail</label>
-                    <input type="text" id="useremail">
+                    <input class="auth__text" type="text" id="useremail">
                 </div>
 
                 <div class="auth__row">
                     <label for="userpass">User password</label>
-                    <input type="password" id="userpass">
+                    <input class="auth__text" type="password" id="userpass">
                 </div>
 
-                <div class="auth__check">
-                    <label>
-                        Subscribe
-                        <input type="checkbox" id="usersubscribe">
-                    </label>
+
+                <label class="auth__check">
+                    Subscribe
+                    <input type="checkbox" id="usersubscribe">
+                </label>
+
+                <div class="auth__row">
+                    <button class="auth__btn">Login</button>
                 </div>
-                <button>Login</button>
             </fieldset>
         </form>
     </main>
