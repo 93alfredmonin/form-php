@@ -18,32 +18,6 @@ var formManager = {
  
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 formManager.valid = function  () {
     var isNotError = true;
     
