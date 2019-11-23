@@ -4,23 +4,23 @@
         <legend>Авторизация</legend>
         <div class="auth__row">
             <label for="username">User name</label>
-            <input class="auth__text" type="text" id="username">
+            <input value="vasa" class="auth__text" type="text" id="username">
             <i class="auth__error auth__error_hide  ">Don't content (_, {}, -, $, 0-9) legth > 5 chars</i>
         </div>
 
         <div class="auth__row">
             <label for="useremail">User e-mail</label>
-            <input class="auth__text" type="text" id="useremail">
+            <input value="vasa@sdv.sd" class="auth__text" type="text" id="useremail">
             <i class="auth__error auth__error_hide  ">Not valid e-mail. (example@gmail.com)</i>
         </div>
         <div class="auth__row">
             <label for="userphone">User phone</label>
-            <input class="auth__text" type="text" id="userphone">
+            <input value="0661052071" class="auth__text" type="text" id="userphone">
             <i class="auth__error auth__error_hide  ">Not valid phone. (+380667589561)</i>
         </div>
         <div class="auth__row">
             <label for="userpass">User password</label>
-            <input class="auth__text" type="password" id="userpass">
+            <input value="vasawwwwwwwwwww"class="auth__text" type="password" id="userpass">
             <i class="auth__error auth__error_hide  "> Must have (_a-z, A-Z, 0-9) legth > 7 chars</i>
         </div>
 
