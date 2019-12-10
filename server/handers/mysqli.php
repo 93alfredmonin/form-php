@@ -8,7 +8,7 @@ function getUsers() {
         exit;
     }
 
-    $dataUsers = $DB->query('SELECT username, age, email FROM users;');
+    $dataUsers = $DB->query('SELECT id, username, email, phone FROM users;');
 
 
 

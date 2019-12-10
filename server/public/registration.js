@@ -61,10 +61,13 @@ formManager.send = function (){
         password:this.password.value,
         subscribe:this.subscribe.checked,
     }
-    fetch('/login',{
-        method:'POST',
+    fetch('/registration', {
+        method: 'POST',
         body: JSON.stringify(data)
-
+    }).then(function(response){
+        return response.json();
+    }).then(function(data){
+        alert (data.message);
     });
 
 }
