@@ -21,5 +21,8 @@
 
             </ul>
         </nav>
+        <p>
+           <?= $routes_str ?>
+        </p>
     </header>
     <main class="page">

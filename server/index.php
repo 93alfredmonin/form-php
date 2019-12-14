@@ -1,4 +1,8 @@
 <?php
+session_start();
+
+
+
 
 include './handers/mysqli.php';
 include './handers/validate.php';

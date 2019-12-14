@@ -1,5 +1,27 @@
 <?php
 
+function getUser($email) {
+    $DB = mysqli_connect("127.0.0.1", "root", "11111111", "website");
+
+    if (!$DB) {
+        echo "Ошибка: Невозможно установить соединение с MySQL." . PHP_EOL;
+        exit;
+    }
+
+    $dataUser = $DB->query("SELECT id, username, email, phone FROM users WHERE email='{$email}';");
+
+
+
+    $user = $dataUser->fetch(MYSQLI_ASSOC);
+
+    //var_dump($users);
+
+
+    mysqli_close($DB);
+
+    return $user;
+}
+
 function getUsers() {
     $DB = mysqli_connect("127.0.0.1", "root", "11111111", "website");
 
