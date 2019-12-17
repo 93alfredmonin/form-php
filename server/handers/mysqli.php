@@ -8,11 +8,11 @@ function getUser($email) {
         exit;
     }
 
-    $dataUser = $DB->query("SELECT id, username, email, phone FROM users WHERE email='{$email}';");
+    $dataUser = $DB->query("SELECT id, username, email, phone, password FROM users WHERE email='{$email}';");
 
 
 
-    $user = $dataUser->fetch(MYSQLI_ASSOC);
+    $user = $dataUser->fetch_all(MYSQLI_ASSOC);
 
     //var_dump($users);
 

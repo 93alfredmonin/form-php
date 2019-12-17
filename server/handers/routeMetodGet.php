@@ -1,27 +1,27 @@
 <?php
 
-
-
 if ($method === 'GET') {
-    
-    
-    
-    if(empty($_SESSION['routes'])){
+
+    $currentUser = $_SESSION['user'];
+
+    $isAdmin = !empty($currentUser) && $currentUser['email'] === 'admin@gmail.com';
+
+    if (empty($_SESSION['routes'])) {
         $_SESSION['routes'] = [];
-    } 
-    
-     
-     
-     if(empty($_SESSION['routes'][$route])){
-         $_SESSION['routes'][$route] = 1;
-     } else {
-         $_SESSION['routes'][$route] ++;
-     }
-     
-     $routes_str = '';
-     foreach ($_SESSION['routes'] as $k => $v){
-         $routes_str .= "{$k} = {$v}, ";
-     }
+    }
+
+
+
+    if (empty($_SESSION['routes'][$route])) {
+        $_SESSION['routes'][$route] = 1;
+    } else {
+        $_SESSION['routes'][$route]++;
+    }
+
+    $routes_str = '';
+    foreach ($_SESSION['routes'] as $k => $v) {
+        $routes_str .= "{$k} = {$v}, ";
+    }
 
     include './views/header.php';
 
@@ -33,17 +33,20 @@ if ($method === 'GET') {
         include './views/contacts.php';
     }
 
-    if ($route === '/registration' ) {
+    if ($route === '/registration') {
         include './views/registration.php';
     }
-    
-    if ($route === '/login' ) {
+
+    if ($route === '/login') {
+        $error = '';
         include './views/login.php';
     }
-    
-    if ($route === '/users' ) {
+
+    if ($route === '/users' && $isAdmin) {
         $users = getUsers();
         include './views/users.php';
+    } elseif ($route === '/users') {
+        header('Location: /login');
     }
 
     include './views/footer.php';
