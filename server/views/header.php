@@ -20,7 +20,9 @@
                 <?php }?>
                 <li><a class="header__link" href="/registration">Registration</a></li>
                 <li><a class="header__link" href="/contacts">Contact</a></li>
-
+                <li>
+                    <b> <?= $currentUser['username']?></b>
+                </li>
             </ul>
         </nav>
         <p>
